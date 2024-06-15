@@ -6,9 +6,17 @@
 super + Return
 	gnome-terminal
 
+# kdeconnect
+super + alt + k
+      kdeconnect-app
+
 # program launcher
-super + @space
+alt + space
 	dmenu_run
+
+# mpv player
+super + alt + space
+        mpv --geometry=500x300+$(($(bspc query -m focused -T | jq '.rectangle.width') - 504))+0 --shuffle --playlist=Hiphop 
 
 # open firefox
 super + alt + f
@@ -31,7 +39,7 @@ super + e
         thunar
 # open zoom
 super + z
-        zoom
+        zoom-client
 
 # open menu 
 super + a
@@ -50,8 +58,8 @@ super + g
         geary
 
 #screenshot
-super + print
-        gnome-screenshot
+Print
+    xfce4-screenshooter 
 
 # make sxhkd reload its configuration files:
 super + Escape
